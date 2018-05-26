@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService  } from 'ngx-webstorage';
 import { JhiEventManager } from 'ng-jhipster';
-
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
@@ -17,6 +16,7 @@ import { MonoSandboxAdminModule } from './admin/admin.module';
 import { MonoSandboxAccountModule } from './account/account.module';
 import { MonoSandboxEntityModule } from './entities/entity.module';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
+import { MonoSandboxPagesModule } from "./pages/pages.module";
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import {
     JhiMainComponent,
@@ -27,7 +27,6 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
-import { TestMeComponent } from './test-me/test-me.component';
 
 @NgModule({
     imports: [
@@ -39,6 +38,7 @@ import { TestMeComponent } from './test-me/test-me.component';
         MonoSandboxAdminModule,
         MonoSandboxAccountModule,
         MonoSandboxEntityModule,
+        MonoSandboxPagesModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
@@ -47,8 +47,7 @@ import { TestMeComponent } from './test-me/test-me.component';
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
-        FooterComponent,
-        TestMeComponent
+        FooterComponent
     ],
     providers: [
         ProfileService,

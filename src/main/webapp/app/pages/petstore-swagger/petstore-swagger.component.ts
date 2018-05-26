@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PetstoreSwaggerComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+      console.log('!');
+  }
 
   ngOnInit() {
   }

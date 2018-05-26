@@ -2,8 +2,8 @@ import { Route } from '@angular/router';
 
 import { PetstoreSwaggerComponent } from './';
 
-export const HOME_ROUTE: Route = {
-    path: '',
+export const PestoreSwaggerRoute: Route = {
+    path: 'pestore-swagger',
     component: PetstoreSwaggerComponent,
     data: {
         authorities: [],
