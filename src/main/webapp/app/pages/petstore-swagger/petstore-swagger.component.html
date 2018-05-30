@@ -1,3 +1,38 @@
-<p>
-  petstore-swagger works!
-</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <!--<button class="btn-default api-test" (click)="addPet()">Add pet</button>-->
+            <!--<br>-->
+            <button class="btn-default api-test" (click)="findByStatus(petStatus.value)">GET pet By Status</button>
+            <input type="text" #petStatus value="pending">
+            <br>
+            <button class="btn-default api-test" (click)="getById(petId.value)">GET pet By Id</button>
+            <input type="text" #petId value="1">
+            <br>
+            <button class="btn-default api-test" (click)="createUser()">POST User</button>
+            <br>
+            <button class="btn-default api-test" (click)="updateUserName(userNameUpdated.value)">PUT User</button>
+            <input type="text" #userNameUpdated value="new name">
+            <br>
+            <button class="btn-default api-test" (click)="deletePet(petIdToRemove.value)">DELETE Pet</button>
+            <input type="text" #petIdToRemove value="10">
+            <br>
+            <button class="btn-default api-test" (click)="deleteOrder(orderIdToRemove.value)">DELETE Order</button>
+            <input type="text" #orderIdToRemove value="4">
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            {{ result }}
+
+            <ul>
+                <li *ngFor="let pet of pets">
+                    {{ pet.id }}:
+                    {{ pet.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

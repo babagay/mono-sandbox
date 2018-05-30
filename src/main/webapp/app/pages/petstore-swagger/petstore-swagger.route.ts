@@ -1,12 +1,14 @@
 import { Route } from '@angular/router';
 
 import { PetstoreSwaggerComponent } from './';
+import {UserRouteAccessService} from "../../shared";
 
 export const PestoreSwaggerRoute: Route = {
-    path: 'pestore-swagger',
+    path: 'apitest',
     component: PetstoreSwaggerComponent,
     data: {
-        authorities: [],
-        pageTitle: 'swagger.title'
+        authorities: [/*'ROLE_USER'*/],
+        pageTitle: 'swagger.title',
+        canActivate: [UserRouteAccessService]
     }
 };
