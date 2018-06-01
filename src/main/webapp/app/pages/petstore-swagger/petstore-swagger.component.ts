@@ -17,11 +17,11 @@ export class PetstoreSwaggerComponent implements OnInit {
 
     private swaggerTestUrl = 'http://petstore.swagger.io/v2';
 
-    private result: string;
+    result: string;
 
     private headers: Headers;
 
-    private pets: any[]
+    pets: any[]
 
     // variant 1
     private httpOptions = {
