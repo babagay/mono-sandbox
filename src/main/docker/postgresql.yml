@@ -5,6 +5,7 @@ services:
         # volumes:
         #     - ~/volumes/jhipster/monoSandbox/postgresql/:/var/lib/postgresql/data/
         environment:
+            - POSTGRES_DB=monoSandbox
             - POSTGRES_USER=monosandbox
             - POSTGRES_PASSWORD=
         ports:

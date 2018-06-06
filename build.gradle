@@ -60,7 +60,7 @@ bootRepackage {
 }
 
 war {
-
+ // https://docs.gradle.org/current/userguide/war_plugin.html
 }
 
 springBoot {
