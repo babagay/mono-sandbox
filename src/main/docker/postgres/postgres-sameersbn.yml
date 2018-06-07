@@ -1,0 +1,22 @@
+version: '2'
+services:
+    monosandbox-postgresql:
+        image: sameersbn/postgresql:9.6-2
+#        volumes:
+#            - exchange:/var/lib/postgresql
+        environment:
+            - DEBUG=false
+
+            - DB_USER=monosandbox
+            - DB_PASS=mono
+            - DB_NAME=monodb
+            - DB_TEMPLATE=
+
+            - DB_EXTENSION=
+
+            - REPLICATION_MODE=
+            - REPLICATION_USER=
+            - REPLICATION_PASS=
+            - REPLICATION_SSLMODE=
+        ports:
+            - "5432:5432"
