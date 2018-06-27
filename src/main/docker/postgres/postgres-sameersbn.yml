@@ -1,9 +1,15 @@
 version: '2'
+# volumes:
+#    pgdata: {}
+#    static: {}
 services:
     monosandbox-postgresql:
         image: sameersbn/postgresql:9.6-2
+        container_name: pg
+# Когда работает маппинг, фэйлится база
+# При отключенном маппинге сервер стартует
 #        volumes:
-#            - exchange:/var/lib/postgresql
+#            - ./pgdata:/var/lib/postgresql 
         environment:
             - DEBUG=false
 

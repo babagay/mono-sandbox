@@ -2,6 +2,7 @@ version: '2'
 services:
     monosandbox-elasticsearch:
         image: elasticsearch:2.4.6
+        container_name: es
         # volumes:
         #     - ~/volumes/jhipster/monoSandbox/elasticsearch/:/usr/share/elasticsearch/data/
         ports:
