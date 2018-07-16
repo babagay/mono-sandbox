@@ -44,9 +44,12 @@ ADD grant.sql /docker-entrypoint-initdb.sh/
 # docker run -it -e MYSQL_ROOT_PASSWORD=secret_pw -p 3307:3306 --name=mysql_sandbox babagay/mysql
 # docker run -it -e MYSQL_ROOT_PASSWORD=secret_pw -p 3307:3306 --name=mysql_sandbox --memory=256M --cpus=1 babagay/mysql
 # docker run -it -e MYSQL_ROOT_PASSWORD=secret_pw -p 3307:3306 --name=mysql_sandbox --memory=256M --cpus=1 -v d:/data:/var/lib/mysql babagay/mysql
+# docker run -it -e MYSQL_ROOT_PASSWORD=secret_pw -p 3307:3306 -d --name=mysql_sandbox --memory=256M --cpus=1 -v ~/mysql_mnt:/var/lib/mysql babagay/mysql
 # 3307 - это порт, на который надо стучатсья с локальной машины. А 3306 - порт внутри контейнера
+# ключ -d позволяет запускать в режиме демона
 # Команда входа в запущенный контейнер через консоль:
 # docker exec -it mysql_sandbox /bin/sh
+# mysql -usandboxuser -psandboxpass
 # лимит памяти для контейнера 256М и одно ядро
 # Ключ -v позволяет подмонтировать локальную папку к папке внутри образа
 # docker rm -f mysql_sandbox - удалить контейнер mysql_sandbox

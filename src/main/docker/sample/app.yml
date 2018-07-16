@@ -1,0 +1,21 @@
+version: '3'
+services:
+    mysql:
+        networks:
+          - net1
+        build:
+          context: .
+          dockerfile: mysql/Dockerfile
+        container_name: mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret_pw
+        ports:
+            - "3306:3306"
+        volumes:
+            - d:/data:/var/lib/mysql
+#    app:
+#        depends_on:
+#          - mysql
+networks:
+  net1:
+    driver: bridge
